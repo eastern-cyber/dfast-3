@@ -25,6 +25,17 @@ export default function TopNav() {
                                 placeholder="ค้นหา"
                             />
 
+                            <div className="absolute bg-white max-w-[910px] h-auto w-full z-20 left-0 top-12 border p-1">
+                                <div className="p-1">
+                                    <a href="/profile/1" className="flex items-center justify-between w-full cursor-pointer hover:bg-[#F12B56] p-1 px-2 hover:text-white" rel="stylesheet">
+                                    <div className="flex items-center">
+                                        <img className="rounded-md" width="40" src="https://placehold.co/400" />
+                                        <div className="truncate ml-2">Mac Paramee</div>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                 </div>
             </div>
