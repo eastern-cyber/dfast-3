@@ -36,13 +36,19 @@ import { Configuration } from 'webpack';
 
 const nextConfig = {
   webpack: (config: Configuration, { isServer }: { isServer: boolean }) => {
-    // Your webpack config modifications here
+    // Ensure config.module exists
+    if (!config.module) {
+      config.module = { rules: [] };
+    }
+  
+    // Add your custom webpack rules
     config.module.rules.push({
       test: /\.node$/,
       use: 'raw-loader',
     });
+  
     return config;
-  },
+  },  
 };
 
 export default nextConfig;
