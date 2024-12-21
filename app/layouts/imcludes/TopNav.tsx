@@ -1,6 +1,6 @@
 
 import { usePathname, useRouter } from "next/navigation";
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiUser } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
@@ -57,7 +57,8 @@ export default function TopNav() {
                                 <span className="px-2 font-medium text-[15px]">อัพโหลด</span>
                             </button>
 
-                            <div className="flex items-center">
+                            {!true ? (
+                                <div className="flex items-center">
                                 <button
                                     className="flex items-center bg-[#F02C56] text-white border rounded-md px-3 py-[6px]"
                                 >
@@ -65,7 +66,28 @@ export default function TopNav() {
                                 </button>
                                 <BsThreeDotsVertical color="#161724" size="25" />
                             </div>
+                            ) : (
+                                <div className="flex items-center">
+                                    <div className="relative">
+                                        <button
+                                            className="mt-1 border border-gray-200 rounded-full"
+                                        >
+                                            <img className="rounded-full w-[35px] h-[35px]" src="https://placehold.co/35" />
+                                        </button>
 
+                                        <div className="absolute bg-white rounded-lg py-1.5 w-[200px] shadow-xl border top-[40px] right-0">
+                                            <button
+                                                className="flex items-center w-full justify-start py-3 px-2 hover:bg-gray-100 cursor-pointer"
+                                            >
+                                                <BiUser size="20" />
+                                                <span className="pl-2 font-semibold text-sm">โปรไฟล์</span>
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                 </div>
