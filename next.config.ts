@@ -42,10 +42,14 @@ const nextConfig = {
     }
   
     // Add your custom webpack rules
+    if (!config.module.rules) {
+      config.module.rules = [];
+    }
+    
     config.module.rules.push({
       test: /\.node$/,
       use: 'raw-loader',
-    });
+    });    
   
     return config;
   },  
