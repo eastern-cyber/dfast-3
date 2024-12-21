@@ -1,5 +1,8 @@
-import Link from "next/link";
+
 import { usePathname, useRouter } from "next/navigation";
+import { BiSearch } from "react-icons/bi";
+import { AiOutlinePlus } from "react-icons/ai";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 export default function TopNav() {
     const router = useRouter()
@@ -7,6 +10,10 @@ export default function TopNav() {
 
     const handleSearchName = (event: { target: { value: string } }) => {
         console.log(event.target.value)
+    }
+
+    const goTo = () => {
+        console.log('here')
     }
 
     return (
@@ -28,15 +35,39 @@ export default function TopNav() {
                             <div className="absolute bg-white max-w-[910px] h-auto w-full z-20 left-0 top-12 border p-1">
                                 <div className="p-1">
                                     <a href="/profile/1" className="flex items-center justify-between w-full cursor-pointer hover:bg-[#F12B56] p-1 px-2 hover:text-white" rel="stylesheet">
-                                    <div className="flex items-center">
-                                        <img className="rounded-md" width="40" src="https://placehold.co/400" />
-                                        <div className="truncate ml-2">Mac Paramee</div>
-                                    </div>
+                                        <div className="flex items-center">
+                                            <img className="rounded-md" width="40" src="https://placehold.co/400" />
+                                            <div className="truncate ml-2">Mac Paramee</div>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
 
+                            <div className="px-3 py-1 flex items-center border-l border-l-gray-300">
+                                <BiSearch color="#A1A2A7" size="22" />
+                            </div>
                         </div>
+
+                        <div className="flex items-center gap-3 ">
+                            <button
+                                onClick={() => goTo()}
+                                className="flex items-center border founded-sm py-[6px] hover:bg-gray-100 pl-1.5"
+                           >
+                                <AiOutlinePlus color="#000000" size="22" />
+                                <span className="px-2 font-medium text-[15px]">อัพโหลด</span>
+                            </button>
+
+                            <div className="flex items-center">
+                                <button
+                                    className="flex items-center bg-[#F02C56] text-white border rounded-md px-3 py-[6px]"
+                                >
+                                <span className="whtiespace-nowrap mx-4 font-medium text-[15px]">ล็อกอิน</span>
+                                </button>
+                                <BsThreeDotsVertical color="#161724" size="25" />
+                            </div>
+
+                        </div>
+
                 </div>
             </div>
         </>
