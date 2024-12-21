@@ -4,13 +4,16 @@ import { MenuItemsTypes } from "@/app/types"
 import { AiOutlineHome } from "react-icons/ai"
 import { BsCameraVideo } from "react-icons/bs"
 import { RiGroupLine } from "react-icons/ri"
+// import { MdGroup } from 'react-icons/md';
+// import { RiGroupLine } from 'react-icons/ri';
+
 
 export default function MenuItem({ iconString, colorString, sizeString }: MenuItemsTypes) {
 
     const icons = () => {
-        if (iconString == 'For You') return <AiOutlineHome size={sizeString} color={colorString}/>
-        if (iconString == 'Following') return <RiGroupLine size={sizeString} color={colorString}/>
-        if (iconString == 'LIVE') return <BsCameraVideo size={sizeString} color={colorString}/>
+        if (iconString == 'สำหรับคุณ') return <AiOutlineHome size={sizeString} color={colorString}/>
+        if (iconString == 'ติดตาม') return <RiGroupLine size={sizeString} color={colorString}/>
+        if (iconString == 'ไลฟ์สด') return <BsCameraVideo size={sizeString} color={colorString}/>
     }
     return (
         <>

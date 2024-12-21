@@ -16,13 +16,13 @@ export default function SideNavMain() {
                 <div className="lg:w-full w-[55px] mx-auto">
                     <a href="/">
                         <MenuItem
-                        iconString="For You"
+                        iconString="สำหรับคุณ"
                         colorString={pathname == '/' ? '#F02C56' : ''}
                         sizeString="25"
                         />
                     </a>
-                    <MenuItem iconString="Fllowing" colorString="#000000" sizeString="25" />
-                    <MenuItem iconString="LIVE" colorString="#000000" sizeString="25" />
+                    <MenuItem iconString="ติดตาม" colorString="#000000" sizeString="25" />
+                    <MenuItem iconString="ไลฟ์สด" colorString="#000000" sizeString="25" />
 
                     <div className="border-b lg:ml-2 mt-2" />
                 </div>
