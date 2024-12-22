@@ -12,7 +12,7 @@ export interface Like {
 export interface Post {
     id: string;
     user_id: string;
-    video-url: string;
+    video_url: string;
     text: string;
     created_at: string;
 }
