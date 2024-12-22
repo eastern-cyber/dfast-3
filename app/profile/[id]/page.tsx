@@ -86,7 +86,6 @@ export default function Profile({ params }: ProfilePageTypes) {
                                 text: 'this is a post - โพสต์ของท่าน',
                                 created_at: 'date here'
                             }} />
-                            abc
                         </div>
                     </ClientOnly>
                 </div>
