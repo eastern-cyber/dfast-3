@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import { PostMainCompTypes } from "../types";
+import { ImMusic } from "react-icons/im";
+import { AiFillHeart } from "react-icons/ai";
 
 export default function PostMain( { post }: PostMainCompTypes) {
 
@@ -32,9 +34,31 @@ export default function PostMain( { post }: PostMainCompTypes) {
                                 {post.profile.name}
                             </span>
                         </a>
-
+                        <button className="border text-[15px] px-[21px] py-0.5 border-[#F02C56] hover:bg-[#ffeef2] font-semibold rounded-md">
+                            ติดตาม
+                        </button>
                     </div>
+                    <p className="text-[15px] pb-0.5 break-words md:max-w-[400px] max-w-[300px]">{post.text}</p>
+                    <p className="text[14px] text-gray-500 pb-0.5">#fun #cool #SuperAwesome</p>
+                    <p className="text[14px] pb-0.5 flex items-center font-semibold">
+                        <ImMusic size="17" />
+                        <span className="px-1">Original Sound - AWESOME</span>
+                        <AiFillHeart size="20" />
+                    </p>
 
+                    <div className="mt-2.5 flex">
+                        <div className="relative min-h-[480px] max-h-[580px] max-w-[260px] flex items-center bg-black rounded-xl cursor-pointer">
+                            <video 
+                                id={`video-${post.id}`}
+                                loop
+                                controls
+                                muted
+                                className="rounded-xl object-cover mx-auto h-full"
+                                src={post?.video_url}
+                            />
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </>)
