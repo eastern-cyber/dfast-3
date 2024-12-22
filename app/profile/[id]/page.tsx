@@ -82,10 +82,11 @@ export default function Profile({ params }: ProfilePageTypes) {
                             <PostUser post={{
                                 id: '123',
                                 user_id: '345',
-                                video_url: '/173530-849610807_small.mp4',
+                                video_url: '/images/173530-849610807_small.mp4',
                                 text: 'this is a post - โพสต์ของท่าน',
                                 created_at: 'date here'
                             }} />
+                            abc
                         </div>
                     </ClientOnly>
                 </div>
