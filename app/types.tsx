@@ -60,7 +60,7 @@ export interface PostUserCompTypes {
 }
 
 export interface ProfilePageTypes {
-    params: { id: string; };
+    params: { id: string };
 }
 
 // LAYOUT INCLUDE TYPES
