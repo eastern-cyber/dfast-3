@@ -60,7 +60,8 @@ export interface PostUserCompTypes {
 }
 
 export interface ProfilePageTypes {
-    params: { id: string };
+    // params: { id: string };
+    params: Promise<{ id: string }>;
 }
 
 // LAYOUT INCLUDE TYPES
