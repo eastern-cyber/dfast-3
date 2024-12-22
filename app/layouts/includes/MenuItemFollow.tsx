@@ -28,6 +28,10 @@ export default function MenuItemFollow({ user }: MenuItemFollowCompTypes) {
                         </p>
                     </div>
 
+                    <p className="font-light text-[12px] text-gray-600">
+                        {user?.name}
+                    </p>
+
                 </div>
             </a>
         </>
