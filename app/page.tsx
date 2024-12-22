@@ -13,7 +13,7 @@ export default function Home() {
             <PostMain post={{ 
               id: '123',
               user_id: '456',
-              video_url: '/70962-536644240_small.mp4',
+              video_url: '/173530-849610807_small.mp4',
               text: 'this is some text',
               created_at: 'date here',
               profile: {

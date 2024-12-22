@@ -4,8 +4,9 @@ import { useEffect } from "react";
 import { PostMainCompTypes } from "../types";
 import { ImMusic } from "react-icons/im";
 import { AiFillHeart } from "react-icons/ai";
+import PostMainLikes from "./PostMainLikes";
 
-export default function PostMain( { post }: PostMainCompTypes) {
+export default function PostMain({ post }: PostMainCompTypes) {
 
     useEffect(() => {
         const video = document.getElementById(`video-${post?.id}`) as HTMLVideoElement
@@ -21,7 +22,7 @@ export default function PostMain( { post }: PostMainCompTypes) {
     }, [])
     return ( 
         <>
-            <div id={`PostMain-${post.id}`} className="flex border-b pt-36 pb-6 px-32">
+            <div id={`PostMain-${post.id}`} className="flex border-b py-6">
                 
                 <div className="cursor-pointer">
                     <img className="rounded-full max-h-[60px]" width="60" src={post?.profile?.image} />
@@ -57,7 +58,15 @@ export default function PostMain( { post }: PostMainCompTypes) {
                                 src={post?.video_url}
                             />
 
+                            <img
+                                className="absolute right-2 bottom-10" 
+                                width="120"
+                                src="/images/3k-logo-white.png"
+                             
+                            />
                         </div>
+
+                        <PostMainLikes post={post} />
                     </div>
                 </div>
             </div>
