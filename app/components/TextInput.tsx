@@ -5,8 +5,8 @@ export default function TextInput({ string, inputType, placeholder, error, onUpd
     return (
         <>
             <input 
-                type={inputType}
-                className="
+            placeholder={placeholder}
+            className="
                     block
                     w-full
                     bg-[#F1F1F2]
