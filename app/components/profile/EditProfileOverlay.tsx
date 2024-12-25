@@ -19,9 +19,9 @@ export default function EditProfileOverlay() {
     const [isUpdating, setIsUpdating] = useState(false);
     const [error, setError] = useState<ShowErrorObject | null>(null)
 
-    const getUploadedImage = (event: React.ChangeEvent<HTMLAnchorElement>) => {
+    const getUploadedImage = (event: React.ChangeEvent<HTMLInputElement>) => {
         const selectedFile = event.target.files && event.target.files[0];
-
+        
         if (selectedFile) {
             setFile(selectedFile);
             setUploadedImage(URL.createObjectURL(selectedFile));
