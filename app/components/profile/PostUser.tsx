@@ -5,11 +5,11 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 export default function PostUser({ post }: PostUserCompTypes) {
 
     useEffect(() => {
-        const video = document.getElementById(`video-${post?.id}`) as HTMLVideoElement
+        const video = document.getElementById(`video${post.id}`) as HTMLVideoElement
 
         setTimeout(() => {
             video.addEventListener('mouseenter', () => { video.play() })
-            video.addEventListener('mouseleave', () => { video.play() })
+            video.addEventListener('mouseleave', () => { video.pause() })
         }, 50)
        
     }, [])
@@ -26,6 +26,7 @@ export default function PostUser({ post }: PostUserCompTypes) {
                             id={`video${post.id}`}
                             muted
                             loop 
+                            className="aspect-[3/4] object-cover rounded-md"
                             src={post.video_url} 
                         />
                     </a>
