@@ -55,7 +55,7 @@ export default function EditProfileOverlay() {
                              แก้ไขโปรไฟล์
                         </h1>
                         <button
-                            disabled={setIsUpdating}
+                            disabled={isUpdating}
                             className="hover:bg-gray-200 p-1 rounded-full"
                         >
                             <AiOutlineClose size="25" />
