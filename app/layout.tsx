@@ -1,7 +1,7 @@
-import AuthOverlay from "@/app/components/AuthOverlay";
 import "./globals.css";
 import type { Metadata } from "next";
 import UserProvider from "./context/user";
+import AllOverlays from "./components/AllOverlays";
 
 export const metadata: Metadata = {
   title: "3K",
@@ -18,7 +18,7 @@ export default function RootLayout({
       <UserProvider>
       
         <body>
-          <AuthOverlay />
+          <AllOverlays />
           {children}
         </body>
 
