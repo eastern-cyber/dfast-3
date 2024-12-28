@@ -78,7 +78,7 @@ export default function Comments({ params }: CommentsCompTypes) {
                         onClick={() => addComment()}
                         className={`
                             font-semibold text-sm ml-5 pr-1
-                            ${comment ? 'text-[#F02C56] cursor-pointer' : 'text-grauy-400'}
+                            ${comment ? 'text-[#eb1c24] cursor-pointer' : 'text-grauy-400'}
                         `}
                     >
                         โพสต์

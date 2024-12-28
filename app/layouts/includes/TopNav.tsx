@@ -61,7 +61,7 @@ export default function TopNav() {
                             {true ? (
                                 <div className="flex items-center">
                                 <button
-                                    className="flex items-center bg-[#F02C56] text-white border rounded-md px-3 py-[6px]"
+                                    className="flex items-center bg-[#eb1c24] text-white border rounded-md px-3 py-[6px]"
                                 >
                                 <span className="whtiespace-nowrap mx-4 font-medium text-[15px]">ล็อกอิน</span>
                                 </button>

@@ -19,7 +19,7 @@ export default function SideNavMain() {
                     <a href="/">
                         <MenuItem
                         iconString="สำหรับคุณ"
-                        colorString={pathname == '/' ? '#F02C56' : ''}
+                        colorString={pathname == '/' ? '#eb1c24' : ''}
                         sizeString="25"
                         />
                     </a>
@@ -37,7 +37,7 @@ export default function SideNavMain() {
                         </div>
                     </ClientOnly>
 
-                    <button className="lg:block hidden text-[#F02C56] pt-1.5 pl-2 text-[13px]">
+                    <button className="lg:block hidden text-[#eb1c24] pt-1.5 pl-2 text-[13px]">
                         ดูทั้งหมด
                     </button>
 
@@ -54,7 +54,7 @@ export default function SideNavMain() {
                                 </div>
                             </ClientOnly>
 
-                            <button className="lg:block hidden text-[#F02C56] pt-1.5 pl-2 text-[13px]">
+                            <button className="lg:block hidden text-[#eb1c24] pt-1.5 pl-2 text-[13px]">
                                 ดูเพิ่ม
                             </button>
                         </div>

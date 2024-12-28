@@ -52,7 +52,7 @@ export default function Profile({ params }: ProfilePageTypes) {
                                 </button>
                             ) : (
                                 <button
-                                    className="flex items-center rounded-md py-1.5 px-8 mt-3 text-[15px] text-white font-semibold bg-[#F02C56]"
+                                    className="flex items-center rounded-md py-1.5 px-8 mt-3 text-[15px] text-white font-semibold bg-[#eb1c24]"
                                 >
                                     กดติดตาม
                                 </button>

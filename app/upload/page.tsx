@@ -86,7 +86,7 @@ export default function Upload() {
                                 <p className="mt-2 text-gray-400 text-[13px]">ขนาดไม่เกิน 2GB</p>
                                 <label
                                     htmlFor="fileInput"
-                                    className="px-2 py-1.5 mt-8 text-white text-[15px] w-[80%] bg-[#F02C56]  rounded-sm cursor-pointer"
+                                    className="px-2 py-1.5 mt-8 text-white text-[15px] w-[80%] bg-[#eb1c24]  rounded-sm cursor-pointer"
                                 >
                                     เลือกไฟล์
                                 </label>
@@ -174,7 +174,7 @@ export default function Upload() {
                                     </div>
                                 </div>
                                 <div className="flex justify-end max-w-[130px] w-full h-full text-center my-auto">
-                                    <button className="px-8 py-1.5 text-white text-[15px] bg-[#F02C56] rounded-sm">
+                                    <button className="px-8 py-1.5 text-white text-[15px] bg-[#eb1c24] rounded-sm">
                                         แก้ไข
                                     </button>
                                 </div>
@@ -210,7 +210,7 @@ export default function Upload() {
                                 <button
                                     disabled={isUploading}
                                     onClick={() => createNewPost()}
-                                    className="px-10 py-2.5 mt-8 border text-[16px] text-white bg-[#F02C56] rounded-sm"
+                                    className="px-10 py-2.5 mt-8 border text-[16px] text-white bg-[#eb1c24] rounded-sm"
                                 >
                                     {isUploading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'โพสต์'}
                                 </button>

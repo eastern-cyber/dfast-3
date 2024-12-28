@@ -35,7 +35,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
                                 {post.profile.name}
                             </span>
                         </a>
-                        <button className="border text-[15px] px-[21px] py-0.5 border-[#F02C56] hover:bg-[#ffeef2] font-semibold rounded-md">
+                        <button className="border text-[15px] px-[21px] py-0.5 border-[#eb1c24] hover:bg-[#ffeef2] font-semibold rounded-md">
                             ติดตาม
                         </button>
                     </div>

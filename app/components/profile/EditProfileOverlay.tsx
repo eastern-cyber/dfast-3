@@ -181,7 +181,7 @@ export default function EditProfileOverlay() {
                                 </button>
                                 <button
                                     disabled={isUpdating}
-                                    className="flex items-center bg-[#F02C56] text-white border rounded-md ml-3 px-3 py-[6px]"
+                                    className="flex items-center bg-[#eb1c24] text-white border rounded-md ml-3 px-3 py-[6px]"
                                 >
                                     <span className="px-2 font-medium text-[15px]">
                                         {isUpdating ? <BiLoaderCircle color="#ffffff" className="my-1 mx-2.5 animate-spin" /> : "บันทึก"}
