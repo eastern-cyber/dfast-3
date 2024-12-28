@@ -1,22 +1,27 @@
 import { database, Query } from "@/libs/AppWriteClient";
+import { profile } from "console";
 
 const useGetRandomUsers = async () => {
     try {
-        const response = await database.listDocuments(
+        const profileResult = await database.listDocuments(
             String(process.env.NEXT_PUBLIC_DATABASE_ID),
             String(process.env.NEXT_PUBLIC_COLLECTION_ID_PROFILE),
             [
-                Query.equal('user_id', userId)
+                Query.limit(5)
             ]
         )
-        const documents = response.documents;
-        return {
-            id: documents[0]?.$id,
-            user_id: documents[0]?.user_id,
-            name: documents[0]?.name,
-            image: documents[0]?.image,
-            bio: documents[0]?.bio
-        }
+        const documents = profileResult.documents;
+        
+        const objPromises = documents.map(profile => {
+            return {
+                id: profile?.user_id,
+                name: profile?.name,
+                image: profile?.image,
+            }
+        })
+
+        const result = await Promise.all (objPromises)
+        return result
     } catch (error) {
         throw error
     }
