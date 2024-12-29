@@ -3,6 +3,7 @@ import { useState } from "react";
 import TextInput from "../TextInput";
 import { BiLoaderCircle } from "react-icons/bi";
 import { useUser } from "@/app/context/user";
+import { FiLogOut } from "react-icons/fi";
 
 export default function Login() {
 

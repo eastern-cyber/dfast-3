@@ -76,8 +76,18 @@ export default function TopNav() {
                                     onClick={() => setIsLoginOpen(true)}
                                     className="flex items-center bg-[#eb1c24] text-white border rounded-md px-3 py-[6px]"
                                 >
-                                <span className="whtiespace-nowrap mx-4 font-medium text-[15px]">ล็อกอิน</span>
+                                 <span className="whtiespace-nowrap mx-4 font-medium text-[15px]">ล็อกอิน</span>
                                 </button>
+                                <button
+                                                    onClick={ async () => {
+                                                        await contextUser?.logout()
+                                                        setShowMenu(false)
+                                                    } }
+                                                    className="flex items-center w-full justify-start py-3 px-2 hover:bg-gray-100 cursor-pointer"
+                                                >
+                                                    <FiLogOut size="20" />
+                                                    <span className="pl-2 font-semibold text-sm">ล็อกเอ้าท์</span>
+                                                </button>
                                 <BsThreeDotsVertical color="#161724" size="25" />
                             </div>
                             ) : (
@@ -99,6 +109,10 @@ export default function TopNav() {
                                                     <span className="pl-2 font-semibold text-sm">โปรไฟล์</span>
                                                 </button>
                                                 <button
+                                                    onClick={ async () => {
+                                                        await contextUser?.logout()
+                                                        setShowMenu(false)
+                                                    } }
                                                     className="flex items-center w-full justify-start py-3 px-2 hover:bg-gray-100 cursor-pointer"
                                                 >
                                                     <FiLogOut size="20" />
