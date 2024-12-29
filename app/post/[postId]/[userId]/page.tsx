@@ -37,18 +37,29 @@ export default function Post({ params }: PostPageTypes) {
     const params = await getParams(); // Or however you fetch params
 
     return (
-        <>
-            <div
-                id="PostPage"
-                className="lg:flex justify-between w-full h-screen bg-black overflow-auto"
-            >
-                <div className="lg:w-[calc(100%-540px)] h-full relative">
+        <div className="lg:w-[calc(100%-540px)] h-full relative">
             <a
                 href={`/profile/${params.userId}`} // Safely access userId
                 className="absolute text-white z-20 m-5 rounded-full bg-gray-700 p-1.5 hover:bg-gray-800"
             >
                 <AiOutlineClose size="27" />
             </a>
+        </div>
+    );
+
+    return (
+        <>
+            <div
+                id="PostPage"
+                className="lg:flex justify-between w-full h-screen bg-black overflow-auto"
+            >
+                <div className="lg:w-[calc(100%-540px)] h-full relative">
+                    <a 
+                        href={`/profile/${params?.userId}`}
+                        className="absolute text-white z-20 m-5 rounded-full bg-gray-700 p-1.5 hover:bg-gray-800"
+                    >
+                        <AiOutlineClose size="27" />
+                    </a>
 
                     <div>
                         <button
