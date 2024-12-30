@@ -3,6 +3,7 @@ import { PostUserCompTypes } from "@/app/types";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BiErrorCircle } from "react-icons/bi";
 import { SiSoundcharts } from "react-icons/si";
+import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl";
 
 export default function PostUser({ post }: PostUserCompTypes) {
 
@@ -29,7 +30,7 @@ export default function PostUser({ post }: PostUserCompTypes) {
                             muted
                             loop 
                             className="aspect-[3/4] object-cover rounded-md"
-                            src={post.video_url} 
+                            src={useCreateBucketUrl(post.video_url)} 
                         />
                     </a>
                 )}

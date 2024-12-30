@@ -5,6 +5,7 @@ import { PostMainCompTypes } from "../types";
 import { ImMusic } from "react-icons/im";
 import { AiFillHeart } from "react-icons/ai";
 import PostMainLikes from "./PostMainLikes";
+import useCreateBucketUrl from "../hooks/useCreateBucketUrl";
 
 export default function PostMain({ post }: PostMainCompTypes) {
 
@@ -25,7 +26,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
             <div id={`PostMain-${post.id}`} className="flex border-b py-6">
                 
                 <div className="cursor-pointer">
-                    <img className="rounded-full max-h-[60px]" width="60" src={post?.profile?.image} />
+                    <img className="rounded-full max-h-[60px]" width="60" src={useCreateBucketUrl(post?.profile?.image)} />
                 </div>
 
                 <div className="pl-3 w-full px-4">
@@ -55,7 +56,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
                                 controls
                                 muted
                                 className="rounded-xl object-cover mx-auto h-full"
-                                src={post?.video_url}
+                                src={useCreateBucketUrl(post?.video_url)}
                             />
 
                             <img
