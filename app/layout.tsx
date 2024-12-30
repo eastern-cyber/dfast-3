@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import UserProvider from "./context/user";
 import AllOverlays from "./components/AllOverlays";
+// import AuthOverlay from "./components/AuthOverlay";
 
 export const metadata: Metadata = {
   title: "3K",

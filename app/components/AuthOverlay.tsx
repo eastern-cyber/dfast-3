@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react"
 import { AiOutlineClose } from "react-icons/ai"
 import Register from "@/app/components/auth/Register"
@@ -29,14 +30,14 @@ export default function AuthOverlay() {
 
                     {isRegister ? <Register /> : <Login />}
 
-                    <div className="absolute flex items-center justify-center py-5 left-0 bottom-0 border-t w-full">
-                        <span className="text-[14px] text-gray-600">ยังไม่มีบัญชีผู้ใช้</span>
+                    <div className="relative flex items-center justify-center py-5 left-0 bottom-0 border-t w-full">
+                        <span className="text-[14px] text-gray-600">ยังไม่มีบัญชีผู้ใช่งาน?</span>
 
                         <button
                             onClick={() => setIsRegister(isRegister = !isRegister)}
                             className="text-[14px] text-[#eb1c24] font-semibold pl-1"
                         >
-                            <span>{!isRegister ? 'Register' : 'log in'}</span>
+                            <span>{!isRegister ? 'ลงทะเบียน' : 'ล็อกอิน'}</span>
                         </button>
                     </div>
 
