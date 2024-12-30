@@ -16,6 +16,7 @@ import useIsLiked from "@/app/hooks/useIsLiked";
 import useCreateLike from "@/app/hooks/useCreateLike";
 import useDeleteLike from "@/app/hooks/useDeleteLike";
 import useDeletePostById from "@/app/hooks/useDeletePostById";
+import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl";
 
 export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes) {
 
@@ -85,7 +86,7 @@ export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes
         }
     }
 
-    const deletePost = () => {
+    const deletePost = async () => {
         let res = confirm('ยืนยันว่าต้องการลบโพสต์นี้?')
         if (!res) return
 
@@ -93,8 +94,12 @@ export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes
 
         try {
             await useDeletePostById(params?.postId, post?.video_url)
+            router.push(`/profile/${params.userId}`)
+            setIsDeleteing(false)
         } catch (error) {
-            
+            console.log(error)
+            setIsDeleteing(false)
+            alert(error)            
         }
     }
 
@@ -105,9 +110,8 @@ export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes
                     <a href={`/profile/${post?.user_id}`}>
                         {post?.profile.image ? (
                             <img 
-                                className="rounded-full lg:mx-0 mx-auto" 
-                                width="40" 
-                                src={post?.profile.image} 
+                                className="rounded-full lg:mx-0 mx-auto" width="40" 
+                                src={useCreateBucketUrl(post?.profile.image)}
                             />
                         ) : (
                             <div className="w-[40px] h-[40px] bg-gray-200 rounded-full" />
@@ -128,7 +132,7 @@ export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes
                     </div>
                 </div>
 
-                {true ? (
+                {contextUser?.user?.id == post?.user_id ? (
                     <div>
                         {isDeleteing ? (
                             <BiLoaderCircle className="animate-spin" size="25" />
@@ -174,7 +178,7 @@ export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes
                         <BsChatDots size={25} />
                     </div>
                     <span className="text-xs pl-2 text-gray-800 font-semibold">
-                        4
+                        {commentsByPost?.length}
                     </span>
                 </div>
 
