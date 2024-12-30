@@ -5,12 +5,18 @@ export interface UserContextTypes {
     logout: () => Promise<void>;
     checkUser: () => Promise<void>;
 }
-
 export interface User {
-    id: string,
-    name: string,
-    bio: string,
-    image: string,
+    id: string;
+    name: string;
+    bio: string;
+    image: string;
+}
+export interface Profile {
+    id: string;
+    user_id: string;
+    name: string;
+    bio: string;
+    image: string;
 }
 export interface RandomUsers {
     id: string;
@@ -88,7 +94,7 @@ export interface UploadError {
 
 export interface CommentsHeaderCompTypes {
     params: { userId: string; postId: string; };
-    post: PostWithProfile
+    post: PostWithProfile;
 }
 
 export interface CommentsCompTypes {
@@ -97,15 +103,15 @@ export interface CommentsCompTypes {
 
 export interface SingleCommentCompTypes {
     params: { userId: string; postId: string; };
-    comment: CommentWithProfile
+    comment: CommentWithProfile;
 }
 
 export interface PostMainCompTypes {
-    post: PostWithProfile
+    post: PostWithProfile;
 }
 
 export interface PostMainLikesCompTypes {
-    post: PostWithProfile
+    post: PostWithProfile;
 }
 
 export interface PostPageTypes {
@@ -113,7 +119,7 @@ export interface PostPageTypes {
 }
 
 export interface PostUserCompTypes {
-    post: Post
+    post: Post;
 }
 
 export interface ProfilePageTypes {
@@ -124,13 +130,13 @@ export interface ProfilePageTypes {
 // LAYOUT INCLUDE TYPES
 
 export interface MenuItemsTypes {
-    iconString: string,
-    colorString: string,
-    sizeString: string
+    iconString: string;
+    colorString: string;
+    sizeString: string;
 }
 
 export interface MenuItemFollowCompTypes {
-    user: RandomUsers
+    user: RandomUsers;
 }
 
 export interface TextInputCompTypes {
