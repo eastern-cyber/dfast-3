@@ -16,6 +16,11 @@ const useCreatePost = async (file: File, userId: string, caption: string) => {
                 created_at: new Date().toISOString(),
             }
         )
+        await storage.createFile(
+            String(process.env.NEXT_PUBLIC_BUCKET_ID),
+            videoId,
+            file
+        )
     } catch (error) {
         throw error
     }
